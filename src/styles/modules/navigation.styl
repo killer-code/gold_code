@@ -2,14 +2,26 @@
     background-color: __bg-light-grey
     background-image: light-gray-gradient
 
-    &__list
-        display: flex
-        flex-direction: row
-        justify-content: center
+.bottom-nav
+    background-color: __bg-grey
+    background-image: dark-gray-gradient
+    border-bottom: 1px solid __bg-light-grey
+
+.top-nav__list,
+.bottom-nav__list
+    display: flex
+    flex-direction: row
+    justify-content: center
 
 
-    &__item
-        color: __black
-        font-weight: 400
-        text-decoration: inherit
-        padding: 30px 20px 25px
+.top-nav__item,
+.bottom-nav__item
+    font-weight: 400
+    text-decoration: inherit
+    padding: 30px 20px 25px
+
+.top-nav__item
+    color: __black
+
+.bottom-nav__item
+    color: __white
