@@ -1,17 +1,19 @@
 header
     .container
         .top-header.row    
-            a(href="/")
+            a.top-header__logo(href="/")
                 img(src="assets/img/top-logo.png", alt="logo")
-            address.col 
+            address.top-header__addr.col(style="flex: 1.3;") 
                 span г. Тольятти, пос. Тимофеевка, 
                 span ул. Солнечная 1А
                 a(href="/") Схема проезда
-            address.col 
+            .top-header__line
+            address.top-header__addr.col 
                 span г. Самара, 
                 span ул. Алма-Атинская 87
                 a(href="/") Схема проезда
-            .tel.row
+            .top-header__line
+            .tel.top-header__tel.row
                 h3 8-800-50-50-900
                 a.btn.top-header__btn(href="tel:+78005050900")
                     span.upper.btn__text Заказать обратный звонок
