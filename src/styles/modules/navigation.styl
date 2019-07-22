@@ -16,6 +16,10 @@
     @media mq-tablet
         flex-wrap: wrap
 
+    @media mq-mobile
+        flex-direction: column
+        align-items: center
+
 
 .top-nav__item,
 .bottom-nav__item
@@ -26,6 +30,16 @@
     color: __black
     padding: 27px 18px 22px
 
+    @media mq-mobile
+        text-align: center
+        padding: 10px
+        width: 100%
+
 .bottom-nav__item
     color: __white
     padding: 27px 25px 22px
+
+    @media mq-mobile
+        text-align: center
+        padding: 10px
+        width: 100%
