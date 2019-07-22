@@ -5,12 +5,25 @@
     @media mq-tablet
         flex-wrap: wrap
 
+    @media mq-mobile
+        flex-wrap: wrap
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding-top: 20px
+
     &__logo
         margin-right: 69px
+
+        @media mq-mobile
+            margin: 0 5px 15px
         
     &__addr
         flex: 1
         padding: 2.5px 0 0 0
+
+        @media mq-mobile
+            align-items: center
 
         & > span
             white-space: nowrap
@@ -26,6 +39,12 @@
 
             & > .top-header__btn
                 margin-left: 20px
+
+        @media mq-mobile
+            flex-direction: column;
+
+            & > .top-header__btn
+                margin-top: 10px
 
     &__btn
         border-radius: 5px
@@ -43,3 +62,8 @@
 
         @media mq-tablet
             margin: 5px 17px 0 7px
+
+        @media mq-mobile
+            width: 100%
+            height: 1px
+            margin: 15px auto
