@@ -1,29 +1,47 @@
 footer.footer
     .container
         .footer__wrap.row
+
             .col.footer__block-left
                 a(href="/")
-                    img(src="assets/img/bottom-logo.png", alt="logo")
+                    img(src="assets/img/bottom-logo.png",
+                    alt="logo",
+                    class="footer__logo")
+
             .col.footer__block-right
                 .row.footer__row.footer__row-top
+
                     address.col 
                         span г. Тольятти, пос. Тимофеевка, 
                         span ул. Солнечная 1А
                     .footer__line
+
                     address.col 
                         span г. Самара, 
                         span ул. Алма-Атинская 87
                     .footer__line
+
                     address.col 
                         a(href="tel:+78005050900") 
-                            i.fas.fa-phone-alt
+                            i.fas.fa-phone-alt.footer__icon
                             span 8-800-50-50-900
                         a(href="mailto:info@asavtomotors.ru") 
-                            i.far.fa-envelope
+                            i.far.fa-envelope.footer__icon
                             span info@asavtomotors.ru
                     .footer__line
+
                     section.social-list
+                        a(href="https://vk.com", target="__blank")
+                            .social-list__item.social-list__item-vk
+                        a(href="https://www.youtube.com" target="__blank")
+                            .social-list__item.social-list__item-youtube
+                        a(href="https://www.instagram.com" target="__blank")
+                            .social-list__item.social-list__item-insta
+                        a(href="https://ok.ru" target="__blank")
+                            .social-list__item.social-list__item-ok
+
                 .row.footer__row.footer__row-bottom
+                
                     section.footer__col-lift
                         small.col.footer__bottom
                             span &copy;2016 группа компаний "АсАвто"
@@ -36,6 +54,7 @@ footer.footer
                                 Федерации. Для получения подробной информации о 
                                 стоимости автомобилей, пожалуйста, обращайтесь к 
                                 менеджерам автосалона.
+
                     section.footer__col-right
                         a(href="https://zolotoykod.ru/", 
                             target="_blank", 
