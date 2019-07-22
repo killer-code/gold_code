@@ -14,6 +14,9 @@
     max-width: 1150px
     margin: auto
 
+    @media mq-tablet
+        margin: 0 20px
+
 .wrapper
     padding: 20px
 
@@ -21,9 +24,17 @@
     display: inline-block
     width: 50%
 
+    @media mq-tablet
+        display: block
+        width: 90%
+        margin-left: 2.5%
+
 .col-2
     column-count: 2
     column-gap: 22px
+
+    @media mq-tablet
+        column-count: 1
 
 .upper
     text-transform: uppercase
