@@ -2,6 +2,9 @@
     padding: 45px 0 20px
     align-items: flex-start
 
+    @media mq-tablet
+        flex-wrap: wrap
+
     &__logo
         margin-right: 69px
         
@@ -17,6 +20,13 @@
         justify-content: space-between
         padding: 10px 0
 
+        @media mq-tablet
+            min-width: 406px
+            justify-content: center
+
+            & > .top-header__btn
+                margin-left: 20px
+
     &__btn
         border-radius: 5px
         background-color: __yellow
@@ -30,3 +40,6 @@
         height: 55px
         margin: 5px 17px 0 14px
         background: __yellow
+
+        @media mq-tablet
+            margin: 5px 17px 0 7px
