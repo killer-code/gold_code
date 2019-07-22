@@ -4,7 +4,7 @@ const stylus       = require('gulp-stylus');
 const pug          = require('gulp-pug');
 
 const minifyCss    = require('gulp-minify-css');
-const minifyJs     = require('gulp-uglify');
+const uglifyJs     = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 const rename       = require('gulp-rename');
 
@@ -48,9 +48,9 @@ gulp.task('compilPug', function() {
     .pipe(reload({stream: true}))
 });
 
-gulp.task('miniJs', function() {
+gulp.task('js', function() {
   return gulp.src(paths.js)
-    .pipe(minifyJs())
+    // .pipe(uglifyJs())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('src/dist'))
     .pipe(reload({stream: true}))
@@ -59,7 +59,7 @@ gulp.task('miniJs', function() {
 gulp.task('watch', function() {
     gulp.watch(paths.styl, gulp.series('compilStyl'));
     gulp.watch(paths.pug, gulp.series('compilPug'));
-    gulp.watch(paths.js, gulp.series('miniJs'));
+    gulp.watch(paths.js, gulp.series('js'));
 });
 
 gulp.task('default', gulp.parallel('watch', 'autoReload'))
