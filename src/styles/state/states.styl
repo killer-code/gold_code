@@ -1,0 +1,62 @@
+//> Ссылки
+a:hover
+    text-decoration: none
+
+.title__link-text:hover
+    border: none
+
+.chevron__link
+    transition: all .3s
+
+.title__link:hover
+
+    & > span 
+        border: none
+
+    & > .chevron__link
+        margin-right: 0
+        margin-left: 10px
+
+//> End
+
+//> Кнопки слайдера
+.slider__btn,
+.slider__chevron-left,
+.slider__chevron-right
+    transition: all .5s
+
+    &:hover
+        background: __yellow
+        color: __white
+        border: 2px solid __white
+        box-shadow: 1px 0px 0px 0px __yellow, 0px 1px 0px 0px __yellow, -1px 0px 0px 0px __yellow, 0px 0px 0px 1px __yellow, inset -50px -49px 0px -30px rgba(0,0,0,0)
+
+        & > .slider__chevron-left,
+        & > .slider__chevron-right
+            border: none
+            background: none
+            box-shadow: none
+            color: __white
+
+         & > .slider__chevron-left
+            margin-right: 15px
+
+        & > .slider__chevron-right
+            margin-left: 15px
+
+        
+//> End
+
+//> Навигации
+.top-nav__item
+    transition: all .5s
+
+    &:hover
+        background: darken(__bg-light-grey, 8%)
+
+.bottom-nav__item
+    transition: all .5s
+
+    &:hover
+        background: darken(__bg-grey, 8%)
+//> End
