@@ -39,12 +39,32 @@ function slider() {
     function prev() {
         position = Math.min(position + widthItem * count, 0);
         listSlides.style.marginLeft = position + 'px';
+
+        if(position === 0) {
+            btnPrev.classList.add('js-btn-disable');
+            btnPrevMob.classList.add('js-btn-disable');
+        }
+
+        if(btnNext.classList.contains('js-btn-disable')) {
+            btnNext.classList.remove('js-btn-disable');
+            btnNextMob.classList.remove('js-btn-disable')
+        }
     };
 
     function next() {
         position = Math.max(position - widthItem * count, 
             -widthItem * (arrSlides.length - visibleSildes));
         listSlides.style.marginLeft = position + 'px';
+
+        if(btnPrev.classList.contains('js-btn-disable')) {
+            btnPrev.classList.remove('js-btn-disable');
+            btnPrevMob.classList.remove('js-btn-disable')
+        }
+
+        if(position === -widthItem * (arrSlides.length - visibleSildes)) {
+            btnNext.classList.add('js-btn-disable');
+            btnNextMob.classList.add('js-btn-disable') 
+        }
     };
 
     btnPrev.addEventListener('click', prev);
