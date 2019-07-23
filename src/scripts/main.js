@@ -1,6 +1,6 @@
-import { topNav }    from '../scripts/modules/top-nav.js';
-import { bottomNav } from '../scripts/modules/bottom-nav.js';
-import { slider }    from '../scripts/modules/slider.js';
+import { topNav }    from '../scripts/modules/top-nav.min.js';
+import { bottomNav } from '../scripts/modules/bottom-nav.min.js';
+import { slider }    from '../scripts/modules/slider.min.js';
 
 topNav();
 bottomNav();
