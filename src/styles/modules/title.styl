@@ -27,5 +27,17 @@
         right: 0
         text-decoration: none
 
+        @media mq-mobile
+            right: 50px
+
         &-text
             border-bottom: 1px solid __yellow
+
+            @media mq-mobile
+                display: none
+
+.news__title-mob
+    display: none
+    
+    @media mq-mobile
+        display: block

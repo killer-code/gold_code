@@ -28,6 +28,11 @@
 
         margin: 0 12px
 
+        @media mq-mobile
+            min-width: 65px
+            height: 65px
+            margin: 0 5px
+
     &__btn
         width: 57px
         height: 56px
@@ -36,6 +41,9 @@
         background: __white
         cursor: pointer
         box-shadow: 1px 0px 0px 0px __white, 0px 1px 0px 0px __white, -1px 0px 0px 0px __white, 0px 0px 0px 1px __white, inset -50px -49px 0px -30px rgba(0,0,0,0)
+
+        @media mq-mobile
+            display: none 
 
         &-prev
             margin-right: 20px
