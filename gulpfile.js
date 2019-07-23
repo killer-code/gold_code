@@ -4,7 +4,7 @@ const stylus       = require('gulp-stylus');
 const pug          = require('gulp-pug');
 
 const minifyCss    = require('gulp-minify-css');
-const uglifyJs     = require('gulp-uglify');
+const uglifyJs     = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const rename       = require('gulp-rename');
 
@@ -15,6 +15,7 @@ const paths = {
   styl : ['src/styles/style.styl'],
   pug  : ['src/templates/index.pug'],
   js   : ['src/scripts/main.js'],
+  mods : ['src/scripts/modules/*.js'],
 };
 
 gulp.task('autoReload', function() {
@@ -31,10 +32,7 @@ gulp.task('autoReload', function() {
 gulp.task('compilStyl', function() {
   return gulp.src(paths.styl)
     .pipe(stylus())
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
+    .pipe(autoprefixer())
     .pipe(minifyCss())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('src/dist'))
@@ -50,9 +48,17 @@ gulp.task('compilPug', function() {
 
 gulp.task('js', function() {
   return gulp.src(paths.js)
-    // .pipe(uglifyJs())
+    .pipe(uglifyJs())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('src/dist'))
+    .pipe(reload({stream: true}))
+});
+
+gulp.task('modulesJs', function() {
+  return gulp.src(paths.mods)
+    .pipe(uglifyJs())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('src/scripts/modules'))
     .pipe(reload({stream: true}))
 });
 
