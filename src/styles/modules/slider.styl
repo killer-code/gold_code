@@ -2,13 +2,18 @@
     justify-content: center
     margin: 50px auto 64px
 
+    @media mq-mobile
+        flex-direction: column
+
     &__wrapper
         width: 940px
         overflow: hidden
 
         @media mq-tablet
             width: 580px
-
+            
+        @media mq-mobile
+            width: 300px
     &__list
         display: flex
         width: 100%
@@ -29,8 +34,8 @@
         margin: 0 12px
 
         @media mq-mobile
-            min-width: 65px
-            height: 65px
+            min-width: 64px
+            height: 64px
             margin: 0 5px
 
     &__btn
@@ -50,3 +55,22 @@
 
         &-next
             margin-left: 20px
+
+        &-mob
+            display: none
+
+            @media mq-mobile
+                display: flex
+                flex-direction: row
+                justify-content: center
+
+.btn__prev-mob,
+.btn__next-mob
+    border-radius: 50%
+    border: solid __yellow 1px
+    width: 40px
+    height: 40px
+    background: 0 0
+    font-size: 30px
+    color: #fdc20f
+    margin: 10px 30px 0
